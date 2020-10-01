@@ -8,5 +8,6 @@ COPY final_project.py /var/www/app/code/hello_world.py
 RUN mkdir /var/www/app/code/upload
 COPY requirements.txt /var/www/app/requirements.txt
 RUN pip3 install -r /var/www/app/requirements.txt
+RUN pip3 install requests
 WORKDIR /var/www/app
 CMD ["python3", "/var/www/app/code/hello_world.py"]
